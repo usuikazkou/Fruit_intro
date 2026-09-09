@@ -7,7 +7,7 @@ import EmailSignupCard from "./components/EmailSignupCard";
 const fruits: Fruit[] = [
   {
     image: "/image/mango.jpg",
-    name: "愛心芒果",
+    name: "愛心芒果666",
     alias: "愛文 / 玉文",
     season: "5 – 8 月",
     desc: "南台灣豔陽下養出的國民水果，果肉金黃香甜，冰鎮後配煉乳更是消暑經典。",
