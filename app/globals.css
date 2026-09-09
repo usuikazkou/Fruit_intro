@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f2e3c2;
+  --paper: #ecd9ae;
+  --ink: #3a2a1a;
+  --brown: #5a3a22;
+  --brick: #b5502f;
+  --mustard: #d9a02c;
+  --mustard-deep: #8a5a1e;
+  --olive: #6b7a3a;
+  --teal: #2f6f66;
+  --line: #8a5a34;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-brown: var(--brown);
+  --color-brick: var(--brick);
+  --color-mustard: var(--mustard);
+  --color-mustard-deep: var(--mustard-deep);
+  --color-olive: var(--olive);
+  --color-teal: var(--teal);
+  --font-serif-tc: var(--font-noto-serif-tc);
+  --font-sans-tc: var(--font-noto-sans-tc);
+}
+
+body {
+  background-color: var(--cream);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.retro-border {
+  border: 3px solid var(--brown);
+  box-shadow: 5px 5px 0 var(--brown);
+}
+
+.retro-divider {
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--brown) 0,
+    var(--brown) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.sunburst {
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(181, 80, 47, 0.12) 0deg 8deg,
+    transparent 8deg 16deg
+  );
+}
+
+.zigzag-paper {
+  height: 14px;
+  background:
+    linear-gradient(135deg, var(--paper) 50%, transparent 50%) 0 0 / 14px 14px repeat-x,
+    linear-gradient(-135deg, var(--paper) 50%, transparent 50%) 0 0 / 14px 14px repeat-x;
+}
+
+.zigzag-brown {
+  height: 14px;
+  background:
+    linear-gradient(135deg, var(--brown) 50%, transparent 50%) 0 0 / 14px 14px repeat-x,
+    linear-gradient(-135deg, var(--brown) 50%, transparent 50%) 0 0 / 14px 14px repeat-x;
+}
+
+.zigzag-ink {
+  height: 14px;
+  background:
+    linear-gradient(135deg, var(--ink) 50%, transparent 50%) 0 0 / 14px 14px repeat-x,
+    linear-gradient(-135deg, var(--ink) 50%, transparent 50%) 0 0 / 14px 14px repeat-x;
+}
+
+.ribbon-tag {
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 12% 100%, 0 50%);
+}
